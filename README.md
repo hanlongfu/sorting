@@ -1,2 +1,4 @@
 # sorting
-various sorting algorithms
+
+This repo contains python code for various sorting algorithms. 
+
