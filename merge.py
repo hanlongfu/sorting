@@ -5,6 +5,8 @@ def merge(list1, list2):
     combined = []
     i = 0
     j = 0
+    # as long as both items have items in them, run the loop
+    # if either one is empty, it will break the loop
     while i < len(list1) and j < len(list2):
         if list1[i] < list2[j]:
             combined.append(list1[i])
@@ -12,7 +14,7 @@ def merge(list1, list2):
         else:
             combined.append(list2[j])
             j += 1
-    # move the remaining items
+    # move the remaining items in the two lists
     while i < len(list1):
         combined.append(list1[i])
         i += 1
@@ -38,6 +40,6 @@ def merge_sort(my_list):
     return merge(merge_sort(left), merge_sort(right))
 
 
-print(merge_sort([3, 1, 4, 2]))
+my_list = [3, 1, 4, 2]
 
-
+print(merge_sort(my_list))

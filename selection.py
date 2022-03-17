@@ -16,10 +16,8 @@ def selection_sort(my_list):
             if my_list[j] < my_list[min_index]:
                 min_index = j
         if i != min_index:
-            # swap my_list[i] with my_list[index]
-            temp = my_list[i]
-            my_list[i] = my_list[min_index]
-            my_list[min_index] = temp
+            # swap my_list[i] with my_list[min_index]
+            my_list[i], my_list[min_index] = my_list[min_index], my_list[i]
     return my_list
 
 
